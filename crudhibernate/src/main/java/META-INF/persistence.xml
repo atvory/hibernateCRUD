@@ -1,0 +1,22 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="PERSISTENCE">
+    <description> Console CRUD JPA Hibernate</description>
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider> <!--  dependiendo del provider modificar -->
+
+    <properties>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" /> <!--  apuntando al conector escogido -->
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/hibernate" /> <!-- url apuntando ala base de datos -->
+      <property name="javax.persistence.jdbc.user" value="root" /> <!--  nombre de usuario de la base de datos -->
+      <property name="javax.persistence.jdbc.password" value="" /> <!--  contraseña de la base de datos -->
+      <property name="hibernate.show_sql" value="true" /> 
+      <property name="hibernate.hbm2ddl.auto" value="update" />        
+    </properties>
+
+  </persistence-unit>
+
+</persistence>
